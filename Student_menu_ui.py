@@ -17,7 +17,7 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QHBoxLayout,
     QHeaderView, QLabel, QLineEdit, QMainWindow,
-    QPushButton, QSizePolicy, QSpacerItem, QTabWidget,
+    QPushButton, QSizePolicy, QSpacerItem, QStackedWidget,
     QTableWidget, QTableWidgetItem, QVBoxLayout, QWidget)
 
 class Ui_MainWindow(object):
@@ -99,14 +99,13 @@ class Ui_MainWindow(object):
         self.frame_2.setFrameShadow(QFrame.Raised)
         self.gridLayout_3 = QGridLayout(self.frame_2)
         self.gridLayout_3.setObjectName(u"gridLayout_3")
-        self.student_menu_stackedwidget = QTabWidget(self.frame_2)
+        self.student_menu_stackedwidget = QStackedWidget(self.frame_2)
         self.student_menu_stackedwidget.setObjectName(u"student_menu_stackedwidget")
-        self.student_menu_stackedwidget.tabBar().setVisible(False)
-        self.student_menu_stackedwidgetPage1 = QWidget()
-        self.student_menu_stackedwidgetPage1.setObjectName(u"student_menu_stackedwidgetPage1")
-        self.gridLayout_2 = QGridLayout(self.student_menu_stackedwidgetPage1)
+        self.student_menu_stackedwidgetPage1_2 = QWidget()
+        self.student_menu_stackedwidgetPage1_2.setObjectName(u"student_menu_stackedwidgetPage1_2")
+        self.gridLayout_2 = QGridLayout(self.student_menu_stackedwidgetPage1_2)
         self.gridLayout_2.setObjectName(u"gridLayout_2")
-        self.room_sched_table = QTableWidget(self.student_menu_stackedwidgetPage1)
+        self.room_sched_table = QTableWidget(self.student_menu_stackedwidgetPage1_2)
         if (self.room_sched_table.columnCount() < 5):
             self.room_sched_table.setColumnCount(5)
         __qtablewidgetitem = QTableWidgetItem()
@@ -153,10 +152,10 @@ class Ui_MainWindow(object):
 
         self.gridLayout_2.addWidget(self.room_sched_table, 0, 0, 1, 1)
 
-        self.student_menu_stackedwidget.addTab(self.student_menu_stackedwidgetPage1, "")
-        self.student_menu_stackedwidgetPage2 = QWidget()
-        self.student_menu_stackedwidgetPage2.setObjectName(u"student_menu_stackedwidgetPage2")
-        self.gridLayout_4 = QGridLayout(self.student_menu_stackedwidgetPage2)
+        self.student_menu_stackedwidget.addWidget(self.student_menu_stackedwidgetPage1_2)
+        self.student_menu_stackedwidgetPage2_2 = QWidget()
+        self.student_menu_stackedwidgetPage2_2.setObjectName(u"student_menu_stackedwidgetPage2_2")
+        self.gridLayout_4 = QGridLayout(self.student_menu_stackedwidgetPage2_2)
         self.gridLayout_4.setObjectName(u"gridLayout_4")
         self.horizontalSpacer = QSpacerItem(70, 20, QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Minimum)
 
@@ -170,7 +169,7 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_2 = QHBoxLayout()
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
-        self.label_11 = QLabel(self.student_menu_stackedwidgetPage2)
+        self.label_11 = QLabel(self.student_menu_stackedwidgetPage2_2)
         self.label_11.setObjectName(u"label_11")
         font2 = QFont()
         font2.setPointSize(11)
@@ -178,7 +177,7 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_2.addWidget(self.label_11)
 
-        self.room_status_stdnt_info = QLineEdit(self.student_menu_stackedwidgetPage2)
+        self.room_status_stdnt_info = QLineEdit(self.student_menu_stackedwidgetPage2_2)
         self.room_status_stdnt_info.setObjectName(u"room_status_stdnt_info")
         self.room_status_stdnt_info.setReadOnly(True)
 
@@ -195,7 +194,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_4.addItem(self.verticalSpacer_5)
 
-        self.label_10 = QLabel(self.student_menu_stackedwidgetPage2)
+        self.label_10 = QLabel(self.student_menu_stackedwidgetPage2_2)
         self.label_10.setObjectName(u"label_10")
         font3 = QFont()
         font3.setPointSize(14)
@@ -210,7 +209,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_19.addItem(self.verticalSpacer_4)
 
-        self.line_2 = QFrame(self.student_menu_stackedwidgetPage2)
+        self.line_2 = QFrame(self.student_menu_stackedwidgetPage2_2)
         self.line_2.setObjectName(u"line_2")
         self.line_2.setFrameShape(QFrame.Shape.HLine)
         self.line_2.setFrameShadow(QFrame.Shadow.Sunken)
@@ -220,7 +219,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_14 = QVBoxLayout()
         self.verticalLayout_14.setSpacing(0)
         self.verticalLayout_14.setObjectName(u"verticalLayout_14")
-        self.label_13 = QLabel(self.student_menu_stackedwidgetPage2)
+        self.label_13 = QLabel(self.student_menu_stackedwidgetPage2_2)
         self.label_13.setObjectName(u"label_13")
         font4 = QFont()
         font4.setPointSize(12)
@@ -232,12 +231,12 @@ class Ui_MainWindow(object):
         self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
         self.verticalLayout_13 = QVBoxLayout()
         self.verticalLayout_13.setObjectName(u"verticalLayout_13")
-        self.first_name_lineedit_stdntinfo = QLineEdit(self.student_menu_stackedwidgetPage2)
+        self.first_name_lineedit_stdntinfo = QLineEdit(self.student_menu_stackedwidgetPage2_2)
         self.first_name_lineedit_stdntinfo.setObjectName(u"first_name_lineedit_stdntinfo")
 
         self.verticalLayout_13.addWidget(self.first_name_lineedit_stdntinfo)
 
-        self.label_30 = QLabel(self.student_menu_stackedwidgetPage2)
+        self.label_30 = QLabel(self.student_menu_stackedwidgetPage2_2)
         self.label_30.setObjectName(u"label_30")
         font5 = QFont()
         font5.setPointSize(9)
@@ -254,12 +253,12 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_12 = QVBoxLayout()
         self.verticalLayout_12.setObjectName(u"verticalLayout_12")
-        self.last_name_lineedit_stdntinfo = QLineEdit(self.student_menu_stackedwidgetPage2)
+        self.last_name_lineedit_stdntinfo = QLineEdit(self.student_menu_stackedwidgetPage2_2)
         self.last_name_lineedit_stdntinfo.setObjectName(u"last_name_lineedit_stdntinfo")
 
         self.verticalLayout_12.addWidget(self.last_name_lineedit_stdntinfo)
 
-        self.label_12 = QLabel(self.student_menu_stackedwidgetPage2)
+        self.label_12 = QLabel(self.student_menu_stackedwidgetPage2_2)
         self.label_12.setObjectName(u"label_12")
         self.label_12.setFont(font5)
 
@@ -279,13 +278,13 @@ class Ui_MainWindow(object):
         self.verticalLayout_15 = QVBoxLayout()
         self.verticalLayout_15.setSpacing(0)
         self.verticalLayout_15.setObjectName(u"verticalLayout_15")
-        self.label_14 = QLabel(self.student_menu_stackedwidgetPage2)
+        self.label_14 = QLabel(self.student_menu_stackedwidgetPage2_2)
         self.label_14.setObjectName(u"label_14")
         self.label_14.setFont(font4)
 
         self.verticalLayout_15.addWidget(self.label_14, 0, Qt.AlignLeft)
 
-        self.email_stdnt_lineedit_info = QLineEdit(self.student_menu_stackedwidgetPage2)
+        self.email_stdnt_lineedit_info = QLineEdit(self.student_menu_stackedwidgetPage2_2)
         self.email_stdnt_lineedit_info.setObjectName(u"email_stdnt_lineedit_info")
 
         self.verticalLayout_15.addWidget(self.email_stdnt_lineedit_info, 0, Qt.AlignVCenter)
@@ -304,13 +303,13 @@ class Ui_MainWindow(object):
         self.verticalLayout_18 = QVBoxLayout()
         self.verticalLayout_18.setSpacing(0)
         self.verticalLayout_18.setObjectName(u"verticalLayout_18")
-        self.label_16 = QLabel(self.student_menu_stackedwidgetPage2)
+        self.label_16 = QLabel(self.student_menu_stackedwidgetPage2_2)
         self.label_16.setObjectName(u"label_16")
         self.label_16.setFont(font4)
 
         self.verticalLayout_18.addWidget(self.label_16, 0, Qt.AlignLeft)
 
-        self.tupc_id_lineedit_info = QLineEdit(self.student_menu_stackedwidgetPage2)
+        self.tupc_id_lineedit_info = QLineEdit(self.student_menu_stackedwidgetPage2_2)
         self.tupc_id_lineedit_info.setObjectName(u"tupc_id_lineedit_info")
 
         self.verticalLayout_18.addWidget(self.tupc_id_lineedit_info, 0, Qt.AlignVCenter)
@@ -330,13 +329,13 @@ class Ui_MainWindow(object):
         self.verticalLayout_17.setObjectName(u"verticalLayout_17")
         self.verticalLayout_5 = QVBoxLayout()
         self.verticalLayout_5.setObjectName(u"verticalLayout_5")
-        self.label_15 = QLabel(self.student_menu_stackedwidgetPage2)
+        self.label_15 = QLabel(self.student_menu_stackedwidgetPage2_2)
         self.label_15.setObjectName(u"label_15")
         self.label_15.setFont(font4)
 
         self.verticalLayout_5.addWidget(self.label_15)
 
-        self.password_stdnt_info = QLineEdit(self.student_menu_stackedwidgetPage2)
+        self.password_stdnt_info = QLineEdit(self.student_menu_stackedwidgetPage2_2)
         self.password_stdnt_info.setObjectName(u"password_stdnt_info")
         self.password_stdnt_info.setReadOnly(True)
 
@@ -348,7 +347,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_19.addLayout(self.verticalLayout_17)
 
-        self.change_pass = QPushButton(self.student_menu_stackedwidgetPage2)
+        self.change_pass = QPushButton(self.student_menu_stackedwidgetPage2_2)
         self.change_pass.setObjectName(u"change_pass")
         self.change_pass.setMinimumSize(QSize(100, 40))
 
@@ -368,7 +367,7 @@ class Ui_MainWindow(object):
 
         self.gridLayout_4.addItem(self.verticalSpacer_2, 1, 1, 1, 1)
 
-        self.student_menu_stackedwidget.addTab(self.student_menu_stackedwidgetPage2, "")
+        self.student_menu_stackedwidget.addWidget(self.student_menu_stackedwidgetPage2_2)
 
         self.gridLayout_3.addWidget(self.student_menu_stackedwidget, 0, 0, 1, 1)
 
@@ -430,7 +429,6 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem17.setText(QCoreApplication.translate("MainWindow", u"7:00", None));
         ___qtablewidgetitem18 = self.room_sched_table.verticalHeaderItem(13)
         ___qtablewidgetitem18.setText(QCoreApplication.translate("MainWindow", u"8:00", None));
-        self.student_menu_stackedwidget.setTabText(self.student_menu_stackedwidget.indexOf(self.student_menu_stackedwidgetPage1), "")
         self.label_11.setText(QCoreApplication.translate("MainWindow", u"Attendance Status:", None))
         self.label_10.setText(QCoreApplication.translate("MainWindow", u"Student Information", None))
         self.label_13.setText(QCoreApplication.translate("MainWindow", u"Name:", None))
@@ -440,6 +438,5 @@ class Ui_MainWindow(object):
         self.label_16.setText(QCoreApplication.translate("MainWindow", u"TUPC-ID:", None))
         self.label_15.setText(QCoreApplication.translate("MainWindow", u"Password:", None))
         self.change_pass.setText(QCoreApplication.translate("MainWindow", u"Change Password", None))
-        self.student_menu_stackedwidget.setTabText(self.student_menu_stackedwidget.indexOf(self.student_menu_stackedwidgetPage2), "")
     # retranslateUi
 

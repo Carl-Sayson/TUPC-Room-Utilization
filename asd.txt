@@ -1,0 +1,94 @@
+{
+    "admin": {
+        "username": "admin",
+        "password": "admin123",
+        "role": "admin"
+    },
+    "students": {},
+    "instructors": {
+        "4": {
+            "first_name": "1",
+            "last_name": "2",
+            "email": "3",
+            "password": "Instructor123"
+        },
+        "1": {
+            "first_name": "2",
+            "last_name": "3",
+            "email": "4",
+            "password": "Instructor123"
+        },
+        "2": {
+            "first_name": "3",
+            "last_name": "4",
+            "email": "1",
+            "password": "Instructor123"
+        },
+        "3": {
+            "first_name": "4",
+            "last_name": "1",
+            "email": "2",
+            "password": "Instructor123"
+        },
+        "aaa": {
+            "first_name": "aaa",
+            "last_name": "aaa",
+            "email": "aa",
+            "password": "Instructor123"
+        }
+    },
+    "staffs": {
+        "4": {
+            "first_name": "1",
+            "last_name": "2",
+            "email": "3",
+            "password": "Staff123"
+        },
+        "1": {
+            "first_name": "2",
+            "last_name": "3",
+            "email": "4",
+            "password": "Staff123"
+        },
+        "2": {
+            "first_name": "3",
+            "last_name": "4",
+            "email": "1",
+            "password": "Staff123"
+        },
+        "3": {
+            "first_name": "4",
+            "last_name": "1",
+            "email": "2",
+            "password": "Staff123"
+        },
+        "aaa": {
+            "first_name": "aaa",
+            "last_name": "aaa",
+            "email": "aaa",
+            "password": "Staff123"
+        }
+    }
+}
+
+
+{
+    "sections": [
+        "a - BET-ET (1st )",
+        "b - BET-MT (2nd)",
+        "c - BET-COET (3rd)",
+        "d - BET-PPT (4th)"
+    ]
+}
+
+
+[
+    {
+        "subject_code": "aaa",
+        "instructor": "aaa",
+        "day": "Monday",
+        "start_time": "12:00 AM",
+        "end_time": "01:00 AM"
+    }
+    
+]

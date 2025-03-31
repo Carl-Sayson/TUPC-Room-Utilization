@@ -6,9 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>572</width>
-    <height>482</height>
+    <width>952</width>
+    <height>713</height>
    </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>952</width>
+    <height>713</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
@@ -16,13 +22,6 @@
   <layout class="QGridLayout" name="gridLayout_3">
    <item row="0" column="0">
     <layout class="QVBoxLayout" name="verticalLayout">
-     <item alignment="Qt::AlignLeft">
-      <widget class="QPushButton" name="back_btn_request_staff">
-       <property name="text">
-        <string>Back</string>
-       </property>
-      </widget>
-     </item>
      <item>
       <widget class="QLabel" name="label_47">
        <property name="font">
@@ -32,6 +31,158 @@
        </property>
        <property name="text">
         <string>Room Request:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QLabel" name="label_6">
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Choose Room:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="choose_rm_btn">
+         <property name="text">
+          <string>Choose</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QLabel" name="label_5">
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Choose Day:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="instructor_day_edit_comboBox">
+         <item>
+          <property name="text">
+           <string>Monday</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Tuesday</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Wednesday</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Thursday</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Friday</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_23">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_10">
+         <property name="spacing">
+          <number>7</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="label_52">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Start of Schedule</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QTimeEdit" name="start_time_staff"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_53">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_59">
+         <property name="spacing">
+          <number>7</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="label_54">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>End of Schedule</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QTimeEdit" name="final_time_staff"/>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_48">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Message:</string>
        </property>
       </widget>
      </item>
@@ -62,135 +213,172 @@
     </layout>
    </item>
    <item row="0" column="1">
-    <layout class="QVBoxLayout" name="verticalLayout_2">
-     <item>
-      <widget class="QStackedWidget" name="stackedWidget">
-       <property name="minimumSize">
-        <size>
-         <width>277</width>
-         <height>423</height>
-        </size>
-       </property>
-       <property name="currentIndex">
-        <number>1</number>
-       </property>
-       <widget class="QWidget" name="sched_view_for_request">
-        <layout class="QGridLayout" name="gridLayout">
-         <item row="1" column="0">
-          <widget class="QTableWidget" name="staff_room_sched_table_request">
-           <column>
-            <property name="text">
-             <string>Time Schedule</string>
-            </property>
-           </column>
-           <column>
-            <property name="text">
-             <string>Monday</string>
-            </property>
-           </column>
-           <column>
-            <property name="text">
-             <string>Tuesday</string>
-            </property>
-           </column>
-           <column>
-            <property name="text">
-             <string>Wednesday</string>
-            </property>
-           </column>
-           <column>
-            <property name="text">
-             <string>Thursday</string>
-            </property>
-           </column>
-           <column>
-            <property name="text">
-             <string>Friday</string>
-            </property>
-           </column>
-          </widget>
+    <widget class="QStackedWidget" name="stackedWidget">
+     <property name="minimumSize">
+      <size>
+       <width>277</width>
+       <height>423</height>
+      </size>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <widget class="QWidget" name="sched_view_for_request">
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="1" column="0">
+        <widget class="QTableWidget" name="staff_room_sched_table_request">
+         <row>
+          <property name="text">
+           <string>7:00</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>8:00</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>9:00</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>10:00</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>11:00</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>12:00</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>1:00</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>2:00</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>3:00</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>4:00</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>5:00</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>6:00</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>7:00</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>8:00</string>
+          </property>
+         </row>
+         <column>
+          <property name="text">
+           <string>Monday</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Tuesday</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Wednesday</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Thursday</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Friday</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+       <item row="0" column="0" alignment="Qt::AlignLeft">
+        <widget class="QPushButton" name="back_room_select_staff">
+         <property name="text">
+          <string>Return</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="list_rooms_request_staff">
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="1" column="0">
+        <widget class="QListWidget" name="room_list_request_staff">
+         <item>
+          <property name="text">
+           <string>Room 1</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="textAlignment">
+           <set>AlignCenter</set>
+          </property>
+          <property name="flags">
+           <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+          </property>
          </item>
-         <item row="0" column="0" alignment="Qt::AlignLeft">
-          <widget class="QPushButton" name="back_room_select_staff">
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <layout class="QHBoxLayout" name="horizontalLayout_19">
+         <item>
+          <widget class="QLineEdit" name="search_bar_room_request_staff"/>
+         </item>
+         <item>
+          <widget class="QPushButton" name="search_room_request_staff_btn">
            <property name="text">
-            <string>Return</string>
+            <string>Search</string>
            </property>
           </widget>
          </item>
         </layout>
-       </widget>
-       <widget class="QWidget" name="list_rooms_request_staff">
-        <layout class="QGridLayout" name="gridLayout_2">
-         <item row="1" column="0">
-          <widget class="QListWidget" name="room_list_request_staff">
-           <item>
-            <property name="text">
-             <string>Room 1</string>
-            </property>
-            <property name="font">
-             <font>
-              <pointsize>12</pointsize>
-             </font>
-            </property>
-            <property name="textAlignment">
-             <set>AlignCenter</set>
-            </property>
-            <property name="flags">
-             <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>rm 2</string>
-            </property>
-            <property name="textAlignment">
-             <set>AlignCenter</set>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>rm 3</string>
-            </property>
-            <property name="textAlignment">
-             <set>AlignCenter</set>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>rm 4</string>
-            </property>
-            <property name="textAlignment">
-             <set>AlignCenter</set>
-            </property>
-           </item>
-          </widget>
-         </item>
-         <item row="0" column="0">
-          <layout class="QHBoxLayout" name="horizontalLayout_19">
-           <item>
-            <widget class="QLineEdit" name="search_bar_room_request_staff"/>
-           </item>
-           <item>
-            <widget class="QPushButton" name="search_room_request_staff_btn">
-             <property name="text">
-              <string>Search</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-        </layout>
-       </widget>
-      </widget>
-     </item>
-     <item alignment="Qt::AlignRight">
-      <widget class="QPushButton" name="send_btn_composed_request_instructor">
-       <property name="text">
-        <string>Send</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
+       </item>
+       <item row="2" column="0" alignment="Qt::AlignRight">
+        <widget class="QPushButton" name="send_btn_composed_request_instructor">
+         <property name="text">
+          <string>Send</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
    </item>
   </layout>
  </widget>

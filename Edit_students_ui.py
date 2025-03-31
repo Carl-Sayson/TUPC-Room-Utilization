@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'Edit_students.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.8.2
+## Created by: Qt User Interface Compiler version 6.8.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -15,33 +15,27 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QHBoxLayout,
-    QLabel, QLineEdit, QListWidget, QListWidgetItem,
-    QPushButton, QSizePolicy, QSpacerItem, QVBoxLayout,
-    QWidget)
+from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGridLayout,
+    QHBoxLayout, QLabel, QLineEdit, QListWidget,
+    QListWidgetItem, QPushButton, QSizePolicy, QSpacerItem,
+    QVBoxLayout, QWidget)
 
-class Ui_Dialog(object):
+class Ui_Form(object):
     def setupUi(self, Form):
         if not Form.objectName():
             Form.setObjectName(u"Form")
-        Form.resize(628, 512)
+        Form.resize(786, 602)
         self.gridLayout = QGridLayout(Form)
         self.gridLayout.setObjectName(u"gridLayout")
         self.frame = QFrame(Form)
         self.frame.setObjectName(u"frame")
+        self.frame.setMinimumSize(QSize(764, 580))
         self.frame.setFrameShape(QFrame.StyledPanel)
         self.frame.setFrameShadow(QFrame.Raised)
-        self.gridLayout_2 = QGridLayout(self.frame)
-        self.gridLayout_2.setObjectName(u"gridLayout_2")
-        self.verticalLayout_2 = QVBoxLayout()
-        self.verticalLayout_2.setSpacing(0)
-        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
+        self.gridLayout_3 = QGridLayout(self.frame)
+        self.gridLayout_3.setObjectName(u"gridLayout_3")
         self.verticalLayout_9 = QVBoxLayout()
         self.verticalLayout_9.setObjectName(u"verticalLayout_9")
-        self.verticalSpacer = QSpacerItem(20, 25, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Fixed)
-
-        self.verticalLayout_9.addItem(self.verticalSpacer)
-
         self.verticalLayout_24 = QVBoxLayout()
         self.verticalLayout_24.setObjectName(u"verticalLayout_24")
         self.verticalLayout_20 = QVBoxLayout()
@@ -140,15 +134,25 @@ class Ui_Dialog(object):
         self.verticalLayout_9.addLayout(self.horizontalLayout)
 
 
-        self.verticalLayout_2.addLayout(self.verticalLayout_9)
-
-
-        self.gridLayout_2.addLayout(self.verticalLayout_2, 1, 0, 1, 1)
+        self.gridLayout_3.addLayout(self.verticalLayout_9, 0, 0, 1, 1)
 
         self.verticalLayout = QVBoxLayout()
         self.verticalLayout.setObjectName(u"verticalLayout")
+        self.label_8 = QLabel(self.frame)
+        self.label_8.setObjectName(u"label_8")
+        self.label_8.setFont(font)
+
+        self.verticalLayout.addWidget(self.label_8)
+
         self.horizontalLayout_12 = QHBoxLayout()
         self.horizontalLayout_12.setObjectName(u"horizontalLayout_12")
+        self.sort_student_section = QComboBox(self.frame)
+        self.sort_student_section.addItem("")
+        self.sort_student_section.addItem("")
+        self.sort_student_section.setObjectName(u"sort_student_section")
+
+        self.horizontalLayout_12.addWidget(self.sort_student_section)
+
         self.search_bar_stdnt_insched = QLineEdit(self.frame)
         self.search_bar_stdnt_insched.setObjectName(u"search_bar_stdnt_insched")
 
@@ -162,27 +166,45 @@ class Ui_Dialog(object):
 
         self.verticalLayout.addLayout(self.horizontalLayout_12)
 
-        self.listWidget = QListWidget(self.frame)
-        __qlistwidgetitem = QListWidgetItem(self.listWidget)
-        __qlistwidgetitem.setTextAlignment(Qt.AlignCenter);
-        self.listWidget.setObjectName(u"listWidget")
-        self.listWidget.setMinimumSize(QSize(360, 233))
+        self.list_students_schedule = QListWidget(self.frame)
+        self.list_students_schedule.setObjectName(u"list_students_schedule")
+        self.list_students_schedule.setMinimumSize(QSize(360, 233))
 
-        self.verticalLayout.addWidget(self.listWidget)
+        self.verticalLayout.addWidget(self.list_students_schedule)
 
 
-        self.gridLayout_2.addLayout(self.verticalLayout, 1, 1, 1, 1)
+        self.gridLayout_3.addLayout(self.verticalLayout, 0, 1, 2, 1)
 
-        self.label_8 = QLabel(self.frame)
-        self.label_8.setObjectName(u"label_8")
-        self.label_8.setFont(font)
+        self.gridLayout_2 = QGridLayout()
+        self.gridLayout_2.setObjectName(u"gridLayout_2")
+        self.label_34 = QLabel(self.frame)
+        self.label_34.setObjectName(u"label_34")
+        self.label_34.setMaximumSize(QSize(16777215, 109))
+        font2 = QFont()
+        font2.setPointSize(14)
+        self.label_34.setFont(font2)
 
-        self.gridLayout_2.addWidget(self.label_8, 0, 1, 1, 1, Qt.AlignLeft|Qt.AlignVCenter)
+        self.gridLayout_2.addWidget(self.label_34, 0, 0, 1, 2, Qt.AlignHCenter)
 
-        self.cancel = QPushButton(self.frame)
-        self.cancel.setObjectName(u"cancel")
+        self.list_sections_schedule = QListWidget(self.frame)
+        self.list_sections_schedule.setObjectName(u"list_sections_schedule")
 
-        self.gridLayout_2.addWidget(self.cancel, 0, 0, 1, 1, Qt.AlignLeft)
+        self.gridLayout_2.addWidget(self.list_sections_schedule, 1, 0, 1, 2)
+
+        self.add_section_btn = QPushButton(self.frame)
+        self.add_section_btn.setObjectName(u"add_section_btn")
+        self.add_section_btn.setMinimumSize(QSize(100, 40))
+
+        self.gridLayout_2.addWidget(self.add_section_btn, 2, 0, 1, 1, Qt.AlignLeft)
+
+        self.remove_section = QPushButton(self.frame)
+        self.remove_section.setObjectName(u"remove_section")
+        self.remove_section.setMinimumSize(QSize(100, 40))
+
+        self.gridLayout_2.addWidget(self.remove_section, 2, 1, 1, 1, Qt.AlignRight)
+
+
+        self.gridLayout_3.addLayout(self.gridLayout_2, 1, 0, 1, 1)
 
 
         self.gridLayout.addWidget(self.frame, 0, 0, 1, 1)
@@ -201,15 +223,14 @@ class Ui_Dialog(object):
         self.label_19.setText(QCoreApplication.translate("Form", u"TUPC-ID:", None))
         self.add_student_schedule.setText(QCoreApplication.translate("Form", u"Add Student", None))
         self.del_student_schedule.setText(QCoreApplication.translate("Form", u"Remove Student", None))
-        self.search_stdnt_insched_btn.setText(QCoreApplication.translate("Form", u"Search", None))
-
-        __sortingEnabled = self.listWidget.isSortingEnabled()
-        self.listWidget.setSortingEnabled(False)
-        ___qlistwidgetitem = self.listWidget.item(0)
-        ___qlistwidgetitem.setText(QCoreApplication.translate("Form", u"23-XXX - Student Name", None));
-        self.listWidget.setSortingEnabled(__sortingEnabled)
-
         self.label_8.setText(QCoreApplication.translate("Form", u"Edit Students:", None))
-        self.cancel.setText(QCoreApplication.translate("Form", u"Back", None))
+        self.sort_student_section.setItemText(0, QCoreApplication.translate("Form", u"A-Z", None))
+        self.sort_student_section.setItemText(1, QCoreApplication.translate("Form", u"Z-A", None))
+
+        self.sort_student_section.setCurrentText(QCoreApplication.translate("Form", u"A-Z", None))
+        self.search_stdnt_insched_btn.setText(QCoreApplication.translate("Form", u"Search", None))
+        self.label_34.setText(QCoreApplication.translate("Form", u"Add / Remove Section", None))
+        self.add_section_btn.setText(QCoreApplication.translate("Form", u"Add Section", None))
+        self.remove_section.setText(QCoreApplication.translate("Form", u"Remove Section", None))
     # retranslateUi
 
