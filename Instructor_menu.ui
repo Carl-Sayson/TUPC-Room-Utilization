@@ -147,14 +147,11 @@
       </property>
       <layout class="QGridLayout" name="gridLayout_3">
        <item row="0" column="1">
-        <widget class="QTabWidget" name="instructor_menu_stackedwidget">
+        <widget class="QStackedWidget" name="instructor_menu_stackedwidget">
          <property name="currentIndex">
           <number>0</number>
          </property>
-         <widget class="QWidget" name="instructor_menu_stackedwidgetPage1">
-          <attribute name="title">
-           <string/>
-          </attribute>
+         <widget class="QWidget" name="instructor_menu_stackedwidgetPage1_2" native="true">
           <layout class="QGridLayout" name="gridLayout_2">
            <item row="0" column="0">
             <widget class="QTabWidget" name="tabWidget">
@@ -434,10 +431,7 @@
            </item>
           </layout>
          </widget>
-         <widget class="QWidget" name="instructor_menu_stackedwidgetPage2">
-          <attribute name="title">
-           <string/>
-          </attribute>
+         <widget class="QWidget" name="instructor_menu_stackedwidgetPage2_2" native="true">
           <layout class="QGridLayout" name="gridLayout_4">
            <item row="0" column="0">
             <spacer name="horizontalSpacer">
@@ -762,10 +756,7 @@
            </item>
           </layout>
          </widget>
-         <widget class="QWidget" name="instructor_menu_stackedwidgetPage3">
-          <attribute name="title">
-           <string/>
-          </attribute>
+         <widget class="QWidget" name="instructor_menu_stackedwidgetPage3_2" native="true">
           <layout class="QGridLayout" name="gridLayout_6">
            <item row="0" column="0">
             <layout class="QGridLayout" name="gridLayout_18">
